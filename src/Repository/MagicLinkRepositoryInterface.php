@@ -3,6 +3,7 @@ declare(strict_types=1);
 
 namespace BlackCat\Database\Packages\MagicLinks\Repository;
 
+use BlackCat\Database\Packages\MagicLinks\Criteria;
 use BlackCat\Database\Contracts\ContractRepository as RepoContract;
 use BlackCat\Database\Contracts\KeysetRepository as KeysetRepoContract;
 use BlackCat\Database\Packages\MagicLinks\Dto\MagicLinkDto as Dto;
