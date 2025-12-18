@@ -3,15 +3,15 @@
 One-time magic-link tokens (fingerprint-only, server-side stored).
 
 ## Columns
-| Column | Type | Null | Default | Description |
-| --- | --- | --- | --- | --- |
-| id | BIGINT | NO |  | Surrogate primary key. |
-| fingerprint | CHAR(64) | NO |  | HMAC fingerprint of the magic-link token. |
-| subject | VARCHAR(128) | NO |  | Subject identifier (typically users.id). |
-| user_id | BIGINT | YES |  | Optional FK users.id for convenience joins. |
-| context | mysql: JSON / postgres: JSONB | YES |  | Context metadata (e.g., redirect) as JSON. |
-| expires_at | mysql: DATETIME(6) / postgres: TIMESTAMPTZ(6) | NO |  | Expiration timestamp (UTC). |
-| created_at | mysql: DATETIME(6) / postgres: TIMESTAMPTZ(6) | NO | CURRENT_TIMESTAMP(6) | Creation timestamp (UTC). |
+| Column | Type | Null | Default | Description | Crypto |
+| --- | --- | --- | --- | --- | --- |
+| id | BIGINT | NO |  | Surrogate primary key. |  |
+| fingerprint | CHAR(64) | NO |  | HMAC fingerprint of the magic-link token. |  |
+| subject | VARCHAR(128) | NO |  | Subject identifier (typically users.id). |  |
+| user_id | BIGINT | YES |  | Optional FK users.id for convenience joins. |  |
+| context | mysql: JSON / postgres: JSONB | YES |  | Context metadata (e.g., redirect) as JSON. |  |
+| expires_at | mysql: DATETIME(6) / postgres: TIMESTAMPTZ(6) | NO |  | Expiration timestamp (UTC). |  |
+| created_at | mysql: DATETIME(6) / postgres: TIMESTAMPTZ(6) | NO | CURRENT_TIMESTAMP(6) | Creation timestamp (UTC). |  |
 
 ## Engine Details
 
