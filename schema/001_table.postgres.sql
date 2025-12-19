@@ -1,4 +1,4 @@
--- Auto-generated from schema-map-postgres.yaml
+-- Auto-generated from schema-map-postgres.yaml (map@sha1:8C4F2BC1C4D22EE71E27B5A7968C71E32D8D884D)
 -- engine: postgres
 -- table:  magic_links
 
@@ -10,5 +10,5 @@ CREATE TABLE IF NOT EXISTS magic_links (
   context JSONB NULL,
   expires_at TIMESTAMPTZ(6) NOT NULL,
   created_at TIMESTAMPTZ(6) NOT NULL DEFAULT CURRENT_TIMESTAMP(6),
-  CONSTRAINT uq_magic_links_fingerprint UNIQUE (fingerprint)
+  CONSTRAINT ux_magic_links_fingerprint UNIQUE (fingerprint)
 );
